@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.NNTeachie</groupId>
 	<artifactId>ms-email-template-sender</artifactId>
-	<version>15-Dec-2024</version>
+	<version>20-Dec-2024</version>
 	<name>ms-email-template-sender</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
