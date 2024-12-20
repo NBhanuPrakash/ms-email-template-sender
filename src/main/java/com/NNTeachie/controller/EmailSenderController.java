@@ -1,11 +1,10 @@
 package com.NNTeachie.controller;
 
-import com.NNTeachie.Dtos.EmailTemplate;
+import com.NNTeachie.model.EmailTemplate;
 import com.NNTeachie.service.EmailSenderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 public class EmailSenderController {

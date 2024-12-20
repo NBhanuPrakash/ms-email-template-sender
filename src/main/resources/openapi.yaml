@@ -1,0 +1,78 @@
+openapi: 3.0.1
+info:
+  title: Email Sending API
+  description: API for sending emails using a provided template.
+  version: 1.0.0
+
+paths:
+  /sendEmail:
+    post:
+      summary: Send an email
+      description: Sends an email using the provided email template.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailTemplate'
+      responses:
+        '204':
+          description: No Content - Email sent successfully.
+        '400':
+          description: Bad Request - Invalid input provided.
+        '500':
+          description: Internal Server Error - Email service failed.
+
+components:
+  schemas:
+    EmailTemplate:
+      type: object
+      properties:
+        recipientEmail:
+          type: array
+          items:
+            type: string
+          description: List of recipient email addresses.
+          example:
+            - example1@example.com
+            - example2@example.com
+        subject:
+          type: string
+          description: Subject of the email.
+          example: Meeting Reminder
+        body:
+          type: string
+          description: Body content of the email.
+          example: Don't forget our meeting tomorrow at 10 AM.
+        signature:
+          type: string
+          description: Email signature.
+          example: Best regards, Your Company
+        filename:
+          type: array
+          items:
+            type: string
+          description: List of filenames to be attached to the email.
+          example:
+            - document.pdf
+            - presentation.pptx
+        bcc:
+          type: array
+          items:
+            type: string
+          description: List of BCC email addresses.
+          example:
+            - bcc1@example.com
+            - bcc2@example.com
+        cc:
+          type: array
+          items:
+            type: string
+          description: List of CC email addresses.
+          example:
+            - cc1@example.com
+            - cc2@example.com
+      required:
+        - recipientEmail
+        - subject
+        - body
