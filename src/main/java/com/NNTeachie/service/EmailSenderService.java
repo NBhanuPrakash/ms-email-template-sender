@@ -1,8 +1,7 @@
 package com.NNTeachie.service;
 
 
-import com.NNTeachie.Dtos.EmailTemplate;
-import org.springframework.web.multipart.MultipartFile;
+import com.NNTeachie.model.EmailTemplate;
 
 public interface EmailSenderService {
 
