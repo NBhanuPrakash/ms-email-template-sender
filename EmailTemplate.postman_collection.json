@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "d8cbb50d-6e2b-485c-a298-d658cad49d61",
+		"name": "EmailTemplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30467112"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/sendEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipientEmail\": [\r\n        \"\"\r\n    ],\r\n    \"subject\": \"Spring Boot Demo\",\r\n    \"body\": \"Construction of the mausoleum was completed in 1648, but work continued on other phases of the project for another five years. The first ceremony held at the mausoleum was an observance by Shah Jahan, on 6 February 1643, of the 12th anniversary of the death of Mumtaz Mahal. The Taj Mahal complex is believed to have been completed in its entirety in 1653 at a cost estimated at the time to be around ₹5 million, which in 2023 would be approximately ₹35 billion (US$77.8 million).\\n\\nThe building complex incorporates the design traditions of Indo-Islamic and Mughal architecture. It employs symmetrical constructions with the usage of various shapes and symbols. While the mausoleum is constructed of white marble inlaid with semi-precious stones, red sandstone was used for other buildings in the complex similar to the Mughal era buildings of the time. The construction project employed more than 20,000 workers and artisans under the guidance of a board of architects led by Ustad Ahmad Lahori, the emperor's court architect.\",\r\n    \"signature\": \"NN Bhanu Prakash\",\r\n    \"filename\": [\r\n        // \"C:/Users/DELL/Downloads/.pdf\",\r\n        // \"C:/Users/DELL/Downloads/.pdf\"\r\n    ],\r\n    \"cc\": [\r\n        \"\",\r\n        \"\"\r\n    ]\r\n    \"bcc\": [\r\n        \"\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendEmail"
+					],
+					"query": [
+						{
+							"key": "File",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
